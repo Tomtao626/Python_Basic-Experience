@@ -26,5 +26,7 @@ urlpatterns = [
     path('',index),
     path('book/',views.book),
     # /book/detail/1
-    path('book/detail/<book_id>/<category_id>',views.book_detail)
+    path('book/detail/<book_id>/<category_id>',views.book_detail),
+    path('book/author/',views.author_detail),
+    path('book/publish/<path:publish_id>',views.publish_detail)
 ]
