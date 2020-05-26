@@ -1,7 +1,7 @@
-"""url_params_demo URL Configuration
+"""url_name_demo URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+    https://docs.djangoproject.com/en/2.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,19 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from book import views
-from django.http import HttpResponse
-
-def index(request):
-    return HttpResponse("首页")
+from django.urls import path,include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',index),
-    path('book/',views.book),
-    # /book/detail/1
-    path('book/detail/<book_id>/<category_id>',views.book_detail),
-    path('book/author/',views.author_detail),
-    path('book/publish/<path:publish_id>',views.publish_detail)
+    # path('admin/', admin.site.urls),
+    # 同一个app下有两个实例
+    path('cms1/',include('cms.urls',namespace='cms1')),
+    path('cms2/',include('cms.urls',namespace='cms2')),
+    path('',include('front.urls'))
 ]
