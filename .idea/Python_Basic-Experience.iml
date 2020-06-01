@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/python_django/chapter02/reverse_demo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/python_django/chapter02/path_converter_demo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/python_django/chapter02/default_params_demo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/python_django/chapter03/template_intro_demo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/python_django/chapter03/template_variable_demo" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
